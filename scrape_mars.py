@@ -31,6 +31,7 @@ def scrape_info():
     article = soup.find('div', class_="slide")
     news_title = article.find('div', class_='content_title').text
     news_p = article.find('div', class_='rollover_description_inner').text
+
     # Scrape Featured Image
     mars_image_response = requests.get(mars_image_url)
     mars_soup = bs(mars_image_response.text, 'html.parser')
@@ -48,8 +49,8 @@ def scrape_info():
     df = mars_data[0]
     df.columns = ['Description', 'Values']
     df.replace("\n","")
-    df.to_html('resources/mars_table.html') 
-    html_table = ('resources/mars_table.html')
+    df.set_index('Description', inplace=True)
+    html_table = df.to_html()
 
     # 5 Mars Hemispheres - Use a Python dictionary to store the data using the keys img_url and title
     

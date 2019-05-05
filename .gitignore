@@ -5,3 +5,5 @@
 *.pyc
 __pycache__/app.cpython-36.pyc
 __pycache__/scrape_mars.cpython-36.pyc
+screenshots/.DS_Store
+.DS_Store

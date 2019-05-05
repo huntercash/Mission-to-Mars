@@ -10,12 +10,13 @@
 <body>
     <div class="container-fluid">
         <div class="jumbotron text-center">
-            <h1>Mars Stuff</h1>
-            <p><a class="btn btn-primary btn-lg" href="../scrape_mars" role="button">Scrape Mars!</a></p>
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="../scrape_mars" role="button">Scrape Mars Data!</a></p>
         </div>
         
             <div class="col-lg-12 col-md-12 col-12">
-                <h1>{{ mars.news_title }}</h1>
+                <h2>Latest Mars News</h2>
+                <h3>{{ mars.news_title }}</h3>
                 <p>{{ mars.news_p }}</p>
             </div>
         <div class="row col-12">
@@ -25,12 +26,15 @@
             </div>
             <div class="col-lg-5">
                 <div class="col-12 col-lg-12 col-md-12 border border-black border-rounded">
-                    <h1>Current Weather on Mars</h1>
+                    <h3>Current Weather on Mars</h3>
                     <p>{{ mars.weather_tweet }}</p>
                 </div>
                 <br>
                 <div class="col-12 col-lg-12 col-md-12">
                     <h3>Mars Facts</h3>
+                    <br>
+                    {{ mars.table|safe }}
+
                 </div>
             </div>
         </div>
