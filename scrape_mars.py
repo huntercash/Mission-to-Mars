@@ -9,11 +9,11 @@ import requests
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
-    #executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
-    #return Browser("chrome", **executable_path, headless=False)
-    # Windows USERS -> Uncommented these 2 lines below, and comment out the top 2 lines
-    executable_path = {'executable_path': 'resources/v74/chromedriver.exe'}
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
     return Browser("chrome", **executable_path, headless=False)
+    # Windows USERS -> Uncommented these 2 lines below, and comment out the top 2 lines
+    #executable_path = {'executable_path': 'resources/v74/chromedriver.exe'}
+    #return Browser("chrome", **executable_path, headless=False)
 
 
 def scrape_info():
